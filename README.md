@@ -5,8 +5,8 @@ make distclean && ./configure --enable-multibyte --with-tlib=ncurses --enable-cs
 安装成功后，克隆本仓库，把vim.tar.gz解压到用户的home目录下，再把vimrc重命名为.vimrc放到用户的home目录下  
 
 ## 一些自定快捷键
-,,取消查找  
-,t打开标签  
+,, 取消查找高亮  
+,t 打开标签  
 ctrl+ghlk 窗口切换  
 shift+ghlk 标签切换  
 f4 打开关闭NERD_TREE  
