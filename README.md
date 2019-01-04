@@ -2,9 +2,10 @@
 git clone https://github.com/vim/vim.git  
 cd vim  
 make distclean && ./configure --enable-multibyte --with-tlib=ncurses --enable-cscope --with-features=huge --enable-luainterp --with-lua-prefix=/usr/local/ --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ --enable-perlinterp && make && make install  
-安装成功后，克隆本仓库，把vim.tar.gz解压到用户的home目录下，再把vimrc重命名为.vimrc放到用户的home目录下  
+安装成功后，克隆本仓库，把vim.tar.gz解压到用户的home目录下，再把.vimrc复制到用户的home目录下  
 
 ## 一些自定快捷键
+\空格 一键删除行末空格
 ,, 取消查找高亮  
 ,t 打开标签  
 ctrl+ghlk 窗口切换  
