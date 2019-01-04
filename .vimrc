@@ -1,12 +1,12 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle 
+" => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
-Bundle 'gmarik/vundle'  
+Bundle 'gmarik/vundle'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mrtazz/DoxygenToolkit.vim'
@@ -19,12 +19,15 @@ Bundle 'tomasr/molokai'
 Bundle 'Valloric/YouCompleteMe'
 "Bundle 'roxma/nvim-completion-manager'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'bronson/vim-trailing-whitespace'
 
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Setting 
+" => Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader><space> :FixWhitespace<cr>
+
 syntax enable
 
 filetype plugin on
@@ -78,7 +81,7 @@ set si
 set nowrap
 set viminfo^=%
 
-set laststatus=2 
+set laststatus=2
 "set statusline=\%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
 set statusline=\%F%m%r%h\ %w\ \ Line:\ %l/%L:%c
 set ut=2000
@@ -92,7 +95,7 @@ let g:solarized_contrast="high"
 colorscheme molokai
 "colorscheme solarized
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
 set switchbuf=useopen,usetab,newtab
 set stal=2
@@ -116,12 +119,12 @@ let g:neocomplete#max_list = 20
 let Tlist_Show_One_File = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Auto_Highlight_Tag = 1
-let Tlist_WinWidth = 30 
+let Tlist_WinWidth = 30
 let Tlist_Use_Right_Window = 1
 let Tlist_Exit_OnlyWindow = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Mappings 
+" => Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 map j gj
@@ -176,14 +179,14 @@ vnoremap <silent> # :call VisualSelection('b')<cr>
 
 "=> mappings for cscope
 map <F12> :call BuildCsTag()<cr>
-nmap fs :cs find s <c-r>=expand("<cword>")<cr><cr>	
-nmap fg :cs find g <c-r>=expand("<cword>")<cr><cr>	
-nmap fc :cs find c <c-r>=expand("<cword>")<cr><cr>	
-nmap ft :cs find t <c-r>=expand("<cword>")<cr><cr>	
-nmap fe :cs find e <c-r>=expand("<cword>")<cr><cr>	
-nmap ff :cs find f <c-r>=expand("<cfile>")<cr><cr>	
+nmap fs :cs find s <c-r>=expand("<cword>")<cr><cr>
+nmap fg :cs find g <c-r>=expand("<cword>")<cr><cr>
+nmap fc :cs find c <c-r>=expand("<cword>")<cr><cr>
+nmap ft :cs find t <c-r>=expand("<cword>")<cr><cr>
+nmap fe :cs find e <c-r>=expand("<cword>")<cr><cr>
+nmap ff :cs find f <c-r>=expand("<cfile>")<cr><cr>
 nmap fi :cs find i ^<c-r>=expand("<cfile>")<cr>$<cr>
-nmap fd :cs find d <c-r>=expand("<cword>")<cr><cr>	
+nmap fd :cs find d <c-r>=expand("<cword>")<cr><cr>
 
 if has("cscope")
     set csto=1
@@ -195,7 +198,7 @@ if has("cscope")
     set csverb
 endif
 
-set tags=.tags 
+set tags=.tags
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => functions
@@ -243,7 +246,7 @@ function! BuildCsTag()
     endif
     if(executable('cscope') && has("cscope"))
         silent! execute "!find . -name '*.erl' -o -name '*.lua' -o -name '*.h' -o -name '*.cpp' -o -name '*.c' -o -name '*.cc' -o -name '*.hpp' | xargs cscope -b -f .cscope.out"
-        execute "normal :"        
+        execute "normal :"
         if filereadable(".cscope.out")
             silent! execute "cs add .cscope.out"
         endif
@@ -252,7 +255,7 @@ function! BuildCsTag()
 endfunction
 
 function! Build()
-    if &filetype == 'lua' 
+    if &filetype == 'lua'
         execute '!lua %'
     elseif &filetype == "sh"
         execute '!bash %'
