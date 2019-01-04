@@ -25,6 +25,9 @@ cd ./lua-5.3.4/
 make linux  
 make install  
 
+## 安装ctag和cscope
+sudo yum -y ctag cscope
+
 ## 如果编译不过尝试以下命令
 sudo yum -y install ncurses-devel lua-devel python-devel perl-devel ruby-devel  
 sudo yum -y install perl-ExtUtils-Embed  
