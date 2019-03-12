@@ -16,8 +16,10 @@ f12 构建ctag
 ctrl+p 查找文件  
 f+f 查找文件  
 f+e 查找单词  
-ctrl+] 查找定义
-ctrl+t 返回
+ctrl+] 查找定义  
+ctrl+t 返回  
+CTRL+o, 向后跳  
+CTRL+i 向前跳
 
 ## 安装lua5.3
 wget http://www.lua.org/ftp/lua-5.3.5.tar.gz  
@@ -27,7 +29,7 @@ make linux
 make install  
 
 ## 安装ctag和cscope
-sudo yum -y ctag cscope
+sudo yum -y ctags cscope
 
 ## 如果编译不过尝试以下命令
 sudo yum -y install ncurses-devel lua-devel python-devel perl-devel ruby-devel  
