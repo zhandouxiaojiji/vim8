@@ -20,6 +20,7 @@ ctrl+] 查找定义
 ctrl+t 返回  
 CTRL+o, 向后跳  
 CTRL+i 向前跳
+CTRL+wx 交换窗口
 
 ## 安装lua5.3
 wget http://www.lua.org/ftp/lua-5.3.5.tar.gz  
