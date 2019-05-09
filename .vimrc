@@ -20,6 +20,7 @@ Bundle 'Valloric/YouCompleteMe'
 "Bundle 'roxma/nvim-completion-manager'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'junegunn/vim-easy-align'
 
 call vundle#end()
 
@@ -27,6 +28,13 @@ call vundle#end()
 " => Setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader><space> :FixWhitespace<cr>
+
+vmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+if !exists('g:easy_align_delimiters')
+    let g:easy_align_delimiters = {}
+endif
+let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
 
 syntax enable
 
