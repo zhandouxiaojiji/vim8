@@ -8,23 +8,23 @@ make distclean && ./configure --enable-multibyte --with-tlib=ncurses --enable-cs
 
 ## 一些自定快捷键
 ```
-\空格 一键删除行末空格
-\a 先选中再\a再输入=对齐变量定义
-,, 取消查找高亮
-,t 打开标签
-ctrl+ghlk 窗口切换
+\空格      一键删除行末空格
+\a         先选中再\a再输入=对齐变量定义
+,,         取消查找高亮
+,t         打开标签
+ctrl+ghlk  窗口切换
 shift+ghlk 标签切换
-f4 打开关闭NERD_TREE
-f5 编译lua
-f12 构建ctag
-ctrl+p 查找文件
-f+f 查找文件
-f+e 查找单词
-ctrl+] 查找定义
-ctrl+t 返回
-CTRL+o, 向后跳
-CTRL+i 向前跳
-CTRL+wx 交换窗口
+f4         打开关闭NERD_TREE
+f5         编译lua
+f12        构建ctag
+ctrl+p     查找文件
+f+f        查找文件
+f+e        查找单词
+ctrl+]     查找定义
+ctrl+t     返回
+CTRL+o,    向后跳
+CTRL+i     向前跳
+CTRL+wx    交换窗口
 ```
 ## 安装lua5.3
 ```
